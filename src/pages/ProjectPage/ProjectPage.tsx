@@ -1,12 +1,17 @@
-import React from 'react';
+import React from 'react'
+import projectsLogo from '../../assets/projects-logo-black.svg'
+import projectsLogoWhite from '../../assets/projects-logo-white.svg'
 
-const ProjectPage: React.FC = () => {
-    return (
-        <div>
-            <h1>Project Page</h1>
-            <p>Welcome to the project page!</p>
-        </div>
-    );
-};
+type ProjectPageProps = {
+    darkMode: boolean;
+  };
 
-export default ProjectPage;
+const ProjectPage: React.FC<ProjectPageProps> = ({darkMode}) => {
+  return (
+    <div>
+        <img src={ darkMode ? projectsLogoWhite : projectsLogo } alt="" />
+    </div>
+  )
+}
+
+export default ProjectPage

@@ -1,12 +1,19 @@
-import React from 'react';
+import React from 'react'
+import About from '../../components/About/About'
+import ProjectPage from '../ProjectPage/ProjectPage'
 
-const HomePage: React.FC = () => {
-    return (
-        <div>
-            <h1>Welcome to My Portfolio</h1>
-            <p>This is the homepage of my portfolio website.</p>
-        </div>
-    );
-};
+type HomePageProps = {
+    darkMode: boolean;
+  };
 
-export default HomePage;
+const HomePage: React.FC<HomePageProps> = ({darkMode}) => {
+  return (
+    <div>
+
+    <About />
+    <ProjectPage darkMode={darkMode} />
+    </div>
+  )
+}
+
+export default HomePage
