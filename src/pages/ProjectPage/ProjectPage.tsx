@@ -1,4 +1,5 @@
 import React from 'react'
+import Card from '../../components/Card/Card'
 import projectsLogo from '../../assets/projects-logo-black.svg'
 import projectsLogoWhite from '../../assets/projects-logo-white.svg'
 
@@ -10,6 +11,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({darkMode}) => {
   return (
     <div>
         <img src={ darkMode ? projectsLogoWhite : projectsLogo } alt="" />
+        <Card darkMode={darkMode}/>
     </div>
   )
 }
